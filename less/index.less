@@ -53,6 +53,25 @@ table {
     box-sizing: border-box;
 }
 
+/*less mixins*/
+
+.dis-flex {
+	display: flex;
+}
+
+
+/*less variables*/
+
+@centered: 0 auto;
+
+
+
+
+
+
+/*code*/
+
+
 html, body {
 		height: 100%;
 }
@@ -61,4 +80,37 @@ html {
 	font-size:62.5%;
 }
 
+#container {
+	width: 90%;
+	margin: @centered;
+	margin-top: 2rem;
+}
 
+header {
+
+	nav {
+		.dis-flex();
+		justify-content: flex-end;
+
+		a {
+			font-size: 2.5rem;
+			margin-left: 3rem;
+			text-decoration: none;
+			color: black;
+
+		}
+	}
+}
+
+
+#top-section {
+
+	.img-container {
+
+		#programmer-img {
+			width: 10rem;
+			height: 10rem;
+
+		}
+	}
+}
