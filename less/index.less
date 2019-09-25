@@ -70,40 +70,48 @@ table {
 
 @four-rems: 4rem;
 
+@top-section-color: #E9ECEF;
 
 
 /*code*/
 
 
 html, body {
-		height: 100%;
+	height: 100%;
 }
 
 html {
 	font-size:62.5%;
 }
 
-#container {
+.container {
 	width: 90% - 5%;
 	margin: @centered;
 	margin-top: @four-rems;
 }
 
 header {
-
 	.nav-bar {
-		.dis-flex(); /*display: flex;*/
+		.dis-flex();
 		justify-content: flex-end;
 
-		@media (max-width: 500px) {
-			justify-content: center;
+		@media (max-width: 800px) {
+			justify-content: space-around;
 		}
-				
+			
 		a {
 			font-size: 2.5rem;
 			margin-left: 3rem;
 			text-decoration: none;
 			color: black;
+
+			@media (max-width: 800px) {
+				margin: 0;
+			}
+
+			@media (max-width: 500px) {
+				font-size: 1.75rem;
+			}
 		}		
 	}
 }
@@ -111,20 +119,25 @@ header {
 
 #top-section {
 
-	background-color: #E9ECEF;
+	background-color: @top-section-color;
 	height: 89rem;
 	padding: @four-rems + @four-rems @four-rems 0 @four-rems;
-	// padding-top: @four-rems + 4rem;
-	// padding-left: @four-rems;
 	margin-top: @four-rems;
 
 	.img-container {
 
 		width: 100%;
+		@media (max-width: 800px) {
+			.dis-flex();
+			justify-content: center;
+		}
 
 		#programmer-img {
 			width: 50%;
-    	height: 37rem;
+			height: 37rem;
+			@media (max-width: 800px) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -132,6 +145,10 @@ header {
 		font-size: 6.5rem;
 		margin-top: 1rem;
 		.bold-text();
+
+		@media (max-width: 800px){
+			font-size: 400%;
+		}
 	}
 
 	h3 {
@@ -167,28 +184,67 @@ header {
 
 	width: 100%;
 
+	@media (max-width: 800px) {
+		display: block;
+	}
+
 	#left-mid-section {
 		width: 48%;
+
+		@media (max-width: 800px) {
+			width: 100%;
+		}
 
 		h2 {
 			font-size: 5rem;
 			.bold-text();
+
+			@media (max-width: 800px) {
+				font-size: 4rem;
+			}
+
+			@media (max-width: 500px) {
+				font-size: 3rem;
+			}
 		}
 
 		p {
 			font-size: 2.25rem;
 			margin-top: 1rem;
 			line-height: 3.2rem;
+
+			@media (max-width: 800px) {
+				font-size: 2rem;
+			}
+
+			@media (max-width: 500px) {
+				font-size: 1.75rem;
+			}
+
 		}
 	}
 
 	#right-mid-section {
 		width: 48%;
 
+		@media (max-width: 800px) {
+			width: 100%;
+			margin-top: @four-rems;
+		}
+
 		h2 {
 			font-size: 4rem;
 			.bold-text();
 			margin-top: 1rem;
+
+			@media (max-width: 800px) {
+				font-size: 3.5rem;
+			}
+
+			@media (max-width: 500px) {
+				font-size: 3rem;
+			}
+
 		}
 
 		ul {
@@ -199,6 +255,12 @@ header {
 				border: .2rem solid #dfdfdf;
 				border-bottom-style: none;
 				padding: 1.5rem 0 1.5rem 1.5rem;
+
+				@media (max-width: 500px) {
+					font-size: 2rem;
+					padding: 1.25rem 0 1.25rem 1.25rem;
+				}
+
 			}
 
 			li:last-child {
@@ -215,17 +277,28 @@ header {
 
 	h2 {
 		font-size: 4rem;
+		.bold-text();
 	}
 
 	table {
 		font-family: arial, sans-serif;
 		border-collapse: collapse;
 		width: 100%;
+		margin-top: 2rem;
+
+		th {
+			.bold-text();
+		}
 
 		td, th {
 			border: 1px solid #dddddd;
 			text-align: left;
 			padding: 8px;
+			font-size: 2rem;
+
+			@media (max-width: 500px) {
+				font-size: 1.75rem;
+			}
 		}
 
 		tr:nth-child(even) {
@@ -236,20 +309,16 @@ header {
 }
 
 footer {
-	margin-top: 1rem;
+	margin-top: 3rem;
 	background-color: #808080;
 	height: 10rem;
 	.dis-flex();
 	justify-content: center;
-  align-items: center;
-}
+	align-items: center;
+	font-size: 2rem;
+	color: white;
 
-// @media (max-width: 500px) {
-// 	.nav-bar {
-// 	justify-content: center;
-// 	background-color: red;
-// 	}
-// 	body {
-// 		background-color: red;
-// 	}
-// }
+	@media (max-width: 500px) {
+		font-size: 1.5rem;
+	}
+}

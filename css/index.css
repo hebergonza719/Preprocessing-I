@@ -146,19 +146,18 @@ body {
 html {
   font-size: 62.5%;
 }
-#container {
+.container {
   width: 85%;
   margin: 0 auto;
   margin-top: 4rem;
 }
 header .nav-bar {
   display: flex;
-  /*display: flex;*/
   justify-content: flex-end;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   header .nav-bar {
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 header .nav-bar a {
@@ -166,6 +165,16 @@ header .nav-bar a {
   margin-left: 3rem;
   text-decoration: none;
   color: black;
+}
+@media (max-width: 800px) {
+  header .nav-bar a {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  header .nav-bar a {
+    font-size: 1.75rem;
+  }
 }
 #top-section {
   background-color: #E9ECEF;
@@ -176,14 +185,30 @@ header .nav-bar a {
 #top-section .img-container {
   width: 100%;
 }
+@media (max-width: 800px) {
+  #top-section .img-container {
+    display: flex;
+    justify-content: center;
+  }
+}
 #top-section .img-container #programmer-img {
   width: 50%;
   height: 37rem;
+}
+@media (max-width: 800px) {
+  #top-section .img-container #programmer-img {
+    width: 100%;
+  }
 }
 #top-section h1 {
   font-size: 6.5rem;
   margin-top: 1rem;
   font-weight: bold;
+}
+@media (max-width: 800px) {
+  #top-section h1 {
+    font-size: 400%;
+  }
 }
 #top-section h3 {
   font-size: 3rem;
@@ -211,25 +236,71 @@ header .nav-bar a {
   margin-top: 4rem;
   width: 100%;
 }
+@media (max-width: 800px) {
+  #middle-section {
+    display: block;
+  }
+}
 #middle-section #left-mid-section {
   width: 48%;
+}
+@media (max-width: 800px) {
+  #middle-section #left-mid-section {
+    width: 100%;
+  }
 }
 #middle-section #left-mid-section h2 {
   font-size: 5rem;
   font-weight: bold;
+}
+@media (max-width: 800px) {
+  #middle-section #left-mid-section h2 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  #middle-section #left-mid-section h2 {
+    font-size: 3rem;
+  }
 }
 #middle-section #left-mid-section p {
   font-size: 2.25rem;
   margin-top: 1rem;
   line-height: 3.2rem;
 }
+@media (max-width: 800px) {
+  #middle-section #left-mid-section p {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  #middle-section #left-mid-section p {
+    font-size: 1.75rem;
+  }
+}
 #middle-section #right-mid-section {
   width: 48%;
+}
+@media (max-width: 800px) {
+  #middle-section #right-mid-section {
+    width: 100%;
+    margin-top: 4rem;
+  }
 }
 #middle-section #right-mid-section h2 {
   font-size: 4rem;
   font-weight: bold;
   margin-top: 1rem;
+}
+@media (max-width: 800px) {
+  #middle-section #right-mid-section h2 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 500px) {
+  #middle-section #right-mid-section h2 {
+    font-size: 3rem;
+  }
 }
 #middle-section #right-mid-section ul {
   margin-top: 1rem;
@@ -240,6 +311,12 @@ header .nav-bar a {
   border-bottom-style: none;
   padding: 1.5rem 0 1.5rem 1.5rem;
 }
+@media (max-width: 500px) {
+  #middle-section #right-mid-section ul li {
+    font-size: 2rem;
+    padding: 1.25rem 0 1.25rem 1.25rem;
+  }
+}
 #middle-section #right-mid-section ul li:last-child {
   border-bottom-style: solid;
 }
@@ -249,26 +326,45 @@ header .nav-bar a {
 }
 #lower-section h2 {
   font-size: 4rem;
+  font-weight: bold;
 }
 #lower-section table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  margin-top: 2rem;
+}
+#lower-section table th {
+  font-weight: bold;
 }
 #lower-section table td,
 #lower-section table th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  #lower-section table td,
+  #lower-section table th {
+    font-size: 1.75rem;
+  }
 }
 #lower-section table tr:nth-child(even) {
   background-color: #dddddd;
 }
 footer {
-  margin-top: 1rem;
+  margin-top: 3rem;
   background-color: #808080;
   height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
+  color: white;
+}
+@media (max-width: 500px) {
+  footer {
+    font-size: 1.5rem;
+  }
 }
