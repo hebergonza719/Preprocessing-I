@@ -1,1 +1,274 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+/*less mixins*/
+.dis-flex {
+  display: flex;
+}
+.bold-text {
+  font-weight: bold;
+}
+/*less variables*/
+/*code*/
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+#container {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+header .nav-bar {
+  display: flex;
+  /*display: flex;*/
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  header .nav-bar {
+    justify-content: center;
+  }
+}
+header .nav-bar a {
+  font-size: 2.5rem;
+  margin-left: 3rem;
+  text-decoration: none;
+  color: black;
+}
+#top-section {
+  background-color: #E9ECEF;
+  height: 89rem;
+  padding: 8rem 4rem 0 4rem;
+  margin-top: 4rem;
+}
+#top-section .img-container {
+  width: 100%;
+}
+#top-section .img-container #programmer-img {
+  width: 50%;
+  height: 37rem;
+}
+#top-section h1 {
+  font-size: 6.5rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+#top-section h3 {
+  font-size: 3rem;
+  margin-top: 1.5rem;
+}
+#top-section hr {
+  margin: 4rem 0;
+  color: #d1d4d7;
+}
+#top-section h2 {
+  font-size: 2.4rem;
+}
+#top-section button {
+  margin-top: 4rem;
+  width: 15.9rem;
+  height: 5rem;
+  color: white;
+  background-color: #808080;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#middle-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  width: 100%;
+}
+#middle-section #left-mid-section {
+  width: 48%;
+}
+#middle-section #left-mid-section h2 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+#middle-section #left-mid-section p {
+  font-size: 2.25rem;
+  margin-top: 1rem;
+  line-height: 3.2rem;
+}
+#middle-section #right-mid-section {
+  width: 48%;
+}
+#middle-section #right-mid-section h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+#middle-section #right-mid-section ul {
+  margin-top: 1rem;
+}
+#middle-section #right-mid-section ul li {
+  font-size: 2.5rem;
+  border: 0.2rem solid #dfdfdf;
+  border-bottom-style: none;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+}
+#middle-section #right-mid-section ul li:last-child {
+  border-bottom-style: solid;
+}
+#lower-section {
+  width: 100%;
+  margin-top: 3rem;
+}
+#lower-section h2 {
+  font-size: 4rem;
+}
+#lower-section table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#lower-section table td,
+#lower-section table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+#lower-section table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+footer {
+  margin-top: 1rem;
+  background-color: #808080;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
