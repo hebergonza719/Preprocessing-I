@@ -134,6 +134,9 @@ table {
 .dis-flex {
   display: flex;
 }
+.bold-text {
+  font-weight: bold;
+}
 /*less variables*/
 /*code*/
 html,
@@ -148,11 +151,17 @@ html {
   margin: 0 auto;
   margin-top: 4rem;
 }
-header nav {
+header .nav-bar {
   display: flex;
+  /*display: flex;*/
   justify-content: flex-end;
 }
-header nav a {
+@media (max-width: 500px) {
+  header .nav-bar {
+    justify-content: center;
+  }
+}
+header .nav-bar a {
   font-size: 2.5rem;
   margin-left: 3rem;
   text-decoration: none;
@@ -174,6 +183,7 @@ header nav a {
 #top-section h1 {
   font-size: 6.5rem;
   margin-top: 1rem;
+  font-weight: bold;
 }
 #top-section h3 {
   font-size: 3rem;
@@ -194,4 +204,71 @@ header nav a {
   background-color: #808080;
   font-size: 2rem;
   font-weight: bold;
+}
+#middle-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  width: 100%;
+}
+#middle-section #left-mid-section {
+  width: 48%;
+}
+#middle-section #left-mid-section h2 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+#middle-section #left-mid-section p {
+  font-size: 2.25rem;
+  margin-top: 1rem;
+  line-height: 3.2rem;
+}
+#middle-section #right-mid-section {
+  width: 48%;
+}
+#middle-section #right-mid-section h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+#middle-section #right-mid-section ul {
+  margin-top: 1rem;
+}
+#middle-section #right-mid-section ul li {
+  font-size: 2.5rem;
+  border: 0.2rem solid #dfdfdf;
+  border-bottom-style: none;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+}
+#middle-section #right-mid-section ul li:last-child {
+  border-bottom-style: solid;
+}
+#lower-section {
+  width: 100%;
+  margin-top: 3rem;
+}
+#lower-section h2 {
+  font-size: 4rem;
+}
+#lower-section table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#lower-section table td,
+#lower-section table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+#lower-section table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+footer {
+  margin-top: 1rem;
+  background-color: #808080;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
