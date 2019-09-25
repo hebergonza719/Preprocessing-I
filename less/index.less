@@ -64,8 +64,7 @@ table {
 
 @centered: 0 auto;
 
-
-
+@four-rems: 4rem;
 
 
 
@@ -81,9 +80,9 @@ html {
 }
 
 #container {
-	width: 90%;
+	width: 90% - 5%;
 	margin: @centered;
-	margin-top: 2rem;
+	margin-top: @four-rems;
 }
 
 header {
@@ -105,12 +104,52 @@ header {
 
 #top-section {
 
+	background-color: #E9ECEF;
+	height: 89rem;
+	padding: @four-rems + @four-rems @four-rems 0 @four-rems;
+	// padding-top: @four-rems + 4rem;
+	// padding-left: @four-rems;
+	margin-top: @four-rems;
+
 	.img-container {
 
-		#programmer-img {
-			width: 10rem;
-			height: 10rem;
+		width: 100%;
 
+		#programmer-img {
+			width: 50%;
+    	height: 37rem;
 		}
 	}
+
+	h1 {
+		font-size: 6.5rem;
+		margin-top: 1rem;
+	}
+
+	h3 {
+		font-size: 3rem;
+		margin-top: 1.5rem;
+	}
+
+	hr {
+		margin: @four-rems 0;
+		color: #d1d4d7;
+	}
+
+	h2 {
+		font-size: 2.4rem;
+	}
+
+	button {
+		margin-top: @four-rems;
+		width: 15.9rem;
+		height: 5rem;
+		color: white;
+		background-color: #808080;
+		font-size: 2rem;
+		font-weight: bold;
+
+	}
+
+
 }
